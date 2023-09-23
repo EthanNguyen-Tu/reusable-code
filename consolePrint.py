@@ -35,7 +35,7 @@ def titled_print(title: str, content: str, style: int = 6, left: str = "", right
     print(content)
 
 
-def grid_print(grid: list[list[str, int, float, bool]], title: str = "Grid", space: bool = True) -> None:
+def grid_print(grid: list[list[str | int | float | bool]], title: str = "Grid", space: bool = True) -> None:
     """
     Prints out a given grid to the console that is a list of lists of strings, integers,
     floats, and/or boolean values.
