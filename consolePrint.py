@@ -1,7 +1,7 @@
 import sys
 
 
-def titled_print(title, content, style=6, left="", right=""):
+def titled_print(title: str, content: str, style: int = 6, left: str = "", right: str = "") -> None:
     """
     Prints to console the given content with a title that adds new lines
     to make the content more easily identifiable and readable.
@@ -30,9 +30,36 @@ def titled_print(title, content, style=6, left="", right=""):
         case 6:
             print("\n\n=====[", title, "]=====\n")
         case _:
-            print("\n\n"+left, title, right+"\n")
+            print("\n\n" + left, title, right + "\n")
 
     print(content)
+
+
+def grid_print(grid: list[list[str, int, float, bool]], title: str = "Grid", space: bool = True) -> None:
+    """
+    Prints out a given grid to the console that is a list of lists of strings, integers,
+    floats, and/or boolean values.
+
+    ex1. grid_print([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+    ex2. grid_print([[True, False], [4.0, 5.0, 6.0], [7, 8, 9], ["Ten"]])
+
+    :param grid: List of Lists of type string, integer, float, and/or boolean
+    :param title: String title of the grid output
+    :param space: Boolean if the grid output should have 1 line spacing at the top
+    :return: None
+    """
+    if space:
+        print()
+
+    print(title)
+
+    for x in range(0, len(grid)):
+        output = str(x) + ": "
+        for y in range(0, len(grid[x])):
+            output += str(grid[x][y])
+            if y < (len(grid[x]) - 1):
+                output += ", "
+        print(output)
 
 
 if __name__ == '__main__':
