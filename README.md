@@ -1,5 +1,5 @@
-# Functions
-Ethan Nguyen-Tu's Personal Functions
+# reusable-components
+Ethan Nguyen-Tu's Personal Reusable Components
 
 ## Terms of Use
 MIT License
