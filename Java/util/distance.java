@@ -1,6 +1,6 @@
 package util;
 
-import interfaces.Locatable;
+import interfaces.Locatable2D;
 
 /**
  * Class that details calculation utilities for the game.
@@ -31,7 +31,7 @@ public class distance {
      * @param range double distance the target should be from the origin
      * @return boolean true if the target is within the origin's range, else false
      */
-    public static boolean inRange(Locatable origin, Locatable target, double range) {
+    public static boolean inRange(Locatable2D origin, Locatable2D target, double range) {
         return manhattanDistance(origin.getX(), origin.getY(), target.getX(), target.getY())
                 < range;
     }

@@ -1,13 +1,13 @@
 package interfaces;
 
 /**
- * Defines the Locatable characteristic. Objects that are locatable have an X-coordinate and a
- * Y-coordinate that is retrievable.
+ * Defines the Locatable2D characteristic. Objects that are Locatable2D have both an
+ * x-coordinate and a y-coordinate that is retrievable.
  *
  * @author Ethan Nguyen-Tu
  * @version 1.0.0
  */
-public interface Locatable {
+public interface Locatable2D {
 
     /**
      * Returns the x-coordinate of an object.

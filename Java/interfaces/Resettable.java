@@ -6,7 +6,7 @@ package interfaces;
  * @author Ethan Nguyen-Tu
  * @version 1.0.0
  */
-public interface Resetable {
+public interface Resettable {
 
     /**
      * Method that resets all of the parameters of the object.
