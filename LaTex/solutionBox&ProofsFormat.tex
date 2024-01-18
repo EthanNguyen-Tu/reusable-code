@@ -1,0 +1,86 @@
+\documentclass[11pt]{article}
+
+%= Math Packages
+\usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
+%= Format Packages
+\usepackage{mdframed}
+
+%= Colors
+\definecolor{Solution_Trim}{RGB}{100, 150, 255}
+\definecolor{Solution_Box}{RGB}{235, 245, 255}
+
+%= New Commands
+\newcommand{\bboxed}[1]{\color{Solution_Trim}\boxed{#1}}
+\newenvironment{solution}
+{
+\vspace{0.5mm}
+\begin{mdframed}[
+linewidth=3pt, leftline=true, rightline=false, 
+bottomline=false, topline=false, linecolor=Solution_Trim,
+backgroundcolor=Solution_Box
+]
+\color{Solution_Trim}
+\textbf{\textsf{Solution: }}
+\color{black}
+}
+{\color{black}\end{mdframed}\vspace{0.5mm}}
+
+\title{LaTex Math Solution Formats}
+\author{Copyright (c) 2023 Ethan Nguyen-Tu}
+\date{}
+
+%--- Q
+\begin{document}
+    \maketitle
+
+%= Math Proof Formats
+
+    %= Basic Solution
+    \begin{solution}
+    
+    \end{solution}
+
+    %= Solution with Show Work
+    \begin{solution}
+        \underline{Work}\\
+    \end{solution}
+
+    %= Solution with Show Work and Bold Answer
+    \begin{solution}
+        \textbf{}
+        \underline{Work}\\
+    \end{solution}
+
+    %= Basic 2 Column
+    \begin{solution}\\
+        \textbf{Proof:}\\
+        \begin{center}
+        %\renewcommand{\arraystretch}{2}
+        \begin{tabular}{rc|c}
+        & Statement & Reason \\
+        \hline
+        1. & & Premise\\
+        2. & & Premise
+        \end{tabular}\\
+        \end{center}
+        
+        $\blacksquare$
+    \end{solution}
+
+    %= 2 Column with Equals
+    \begin{solution}\\
+        \textbf{Proof:}\\
+        \begin{center}
+        %\renewcommand{\arraystretch}{2}
+        \begin{tabular}{rcc|c}
+        && Statement & Reason \\
+        \hline
+        1. && & Premise\\
+        2. &=& & Premise
+        \end{tabular}\\
+        \end{center}
+        
+        $\blacksquare$
+    \end{solution}
+
+\end{document}
