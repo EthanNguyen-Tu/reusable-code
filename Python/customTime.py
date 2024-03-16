@@ -34,7 +34,7 @@ def beginningOfWeek(date, dayWeekBegins="Sunday"):
     specified date.
 
     @param date datetime specifying the date whose beginning week date is of interest
-    @param String specifying what is day of the week is considered the start of the week, default value "Sunday"
+    @param dayWeekBegins String specifying what is day of the week is considered the start of the week, default value "Sunday"
     @returns datetime of the day that begins the week containing the given date
     """
     isoNum = date.isoweekday()
@@ -50,7 +50,7 @@ def startOfYear(date, dayYearBegins="Sunday"):
     occurs before or on January 1st of the given date's year.
 
     @param date datetime specifying the year whose start date is of interest
-    @param String specifying what day of the week is considered the start of the year, default value "Sunday"
+    @param dayYearBegins String specifying what day of the week is considered the start of the year, default value "Sunday"
     @returns datetime of the first day of the year
     """
     return beginningOfWeek(dt.datetime(date.year, 1, 1), dayYearBegins)
@@ -62,8 +62,8 @@ def weekOfYear(date, dayYearBegins="Sunday"):
     Finds the week of the year of the given date.
 
     @param date datetime specifying the day whose start week of the year is of interest
-    @param String specifying what day of the week is considered the start of the year, default value "Sunday"
+    @param dayYearBegins String specifying what day of the week is considered the start of the year, default value "Sunday"
     @returns Integer of the week of the year the give date is
     """
     # Add 1 to account for the beginning for the first week
-    return -(-(abs(date - startOfYear(date)).days + 1) // 7)
+    return -(-(abs(date - startOfYear(date, dayYearBegins)).days + 1) // 7)
