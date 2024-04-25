@@ -1,7 +1,7 @@
 ---
 title: Ethan's Amazing Template
 layout: default
-filename: pages_template.md
+filename: GitHubPages-Markdown-Template.md
 ---
 <!-- Above, you can name the title of the page, specify the layout, specify the filename, etc. -->
 
