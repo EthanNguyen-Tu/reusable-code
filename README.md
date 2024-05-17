@@ -1,6 +1,8 @@
 # reusable-components
 Ethan Nguyen-Tu's Personal Reusable Components
 
+Any snippet of code that Ethan Nguyen-Tu wrote and thinks can be or has been used in multiple projects can be found here.
+
 ## Terms of Use
 MIT License
 
