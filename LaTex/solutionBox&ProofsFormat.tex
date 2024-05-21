@@ -1,31 +1,8 @@
 \documentclass[11pt]{article}
+\input{solutionBoxHeader.tex}
 
-%= Math Packages
-\usepackage{amsmath, amsfonts, amssymb, mathtools, versions}
-%= Format Packages
-\usepackage{mdframed}
-
-%= Colors
-\definecolor{Solution_Trim}{RGB}{100, 150, 255}
-\definecolor{Solution_Box}{RGB}{235, 245, 255}
-
-%= New Commands
-\newcommand{\bboxed}[1]{\color{Solution_Trim}\boxed{#1}}
-\newenvironment{solution}
-{
-\vspace{0.5mm}
-\begin{mdframed}[
-linewidth=3pt, leftline=true, rightline=false, 
-bottomline=false, topline=false, linecolor=Solution_Trim,
-backgroundcolor=Solution_Box
-]
-\color{Solution_Trim}
-\textbf{\textsf{Solution: }}
-\color{black}
-}
-{\color{black}\end{mdframed}\vspace{0.5mm}}
-
-\title{LaTex Math Solution Formats}
+% Remove \vspace{-2cm} or edit the value of -2cm to shift the title up and down
+\title{\vspace{-2cm}LaTex Math Solution Formats}
 \author{Copyright (c) 2023 Ethan Nguyen-Tu}
 \date{}
 
@@ -41,21 +18,21 @@ backgroundcolor=Solution_Box
     \end{solution}
 
     %= Solution with Show Work
-    \begin{solution}
-        \underline{Work}\\
+    \begin{solution}\\
+        Amazing Answer
+        \\\underline{Work}\\
     \end{solution}
 
     %= Solution with Show Work and Bold Answer
-    \begin{solution}
-        \textbf{}
-        \underline{Work}\\
+    \begin{solution}\\
+        \textbf{Amazing Answer}
+        \\\underline{Work}\\
     \end{solution}
 
     %= Basic 2 Column
     \begin{solution}\\
         \textbf{Proof:}\\
         \begin{center}
-        %\renewcommand{\arraystretch}{2}
         \begin{tabular}{rc|c}
         & Statement & Reason \\
         \hline
@@ -71,7 +48,6 @@ backgroundcolor=Solution_Box
     \begin{solution}\\
         \textbf{Proof:}\\
         \begin{center}
-        %\renewcommand{\arraystretch}{2}
         \begin{tabular}{rcc|c}
         && Statement & Reason \\
         \hline
