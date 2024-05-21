@@ -12,21 +12,26 @@
 \definecolor{Solution_Trim}{RGB}{100, 150, 255}
 \definecolor{Solution_Box}{RGB}{235, 245, 255}
 
-%= New Commands
-\newcommand{\bboxed}[1]{\color{Solution_Trim}\boxed{#1}}
+%= Solution Box Environment
 \newenvironment{solution}
 {
 \vspace{0.5mm}
 \begin{mdframed}[
-linewidth=3pt, leftline=true, rightline=false, 
-bottomline=false, topline=false, linecolor=Solution_Trim,
+linewidth=3pt,
+leftline=true, rightline=false, 
+bottomline=false, topline=false,
+linecolor=Solution_Trim,
 backgroundcolor=Solution_Box
 ]
 \color{Solution_Trim}
 \textbf{\textsf{Solution: }}
 \color{black}
 }
-{\color{black}\end{mdframed}\vspace{0.5mm}}
+{
+\color{black}
+\end{mdframed}
+\vspace{0.5mm}
+}
 
 %= Algorithm Package
-\usepackage[lined,boxed,ruled,norelsize,algo2e,linesnumbered,noend]{algorithm2e}
+\usepackage[lined, boxed, ruled, norelsize, algo2e, linesnumbered, noend]{algorithm2e}
