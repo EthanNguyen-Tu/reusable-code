@@ -1,0 +1,121 @@
+\documentclass{exam}
+\input{GeneralSolutionBoxHeader.tex}
+
+% Remove \vspace{-2cm} or edit the value of -2cm to shift the title up and down
+\title{\vspace{-2cm}LaTex General Solution/Answer Box Formats}
+\author{Copyright (c) 2025 Ethan Nguyen-Tu}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+
+%= SOLUTION BOX FORMATS
+\begin{center}
+    \textbf{\underline{Solution Box Formats}}
+\end{center}
+
+
+% GENERAL SOLUTION BOX:
+
+\begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.95\textwidth]
+\textbf{Solution:}\\
+\end{tcolorbox}
+
+
+% SOLUTION BOX (REGULAR QUESTION):
+\begin{questions}
+    \question Regular Example Question?
+
+    % SOLUTION BOX:
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.95\textwidth]
+    \textbf{Solution:}\\
+    \end{tcolorbox}
+    
+\end{questions}
+    
+
+% SOLUTION BOX (QUESTION PART):
+\begin{questions}
+    \question Example Question With A Part?
+    \begin{parts}
+    \part Example Question Part?
+
+    % SOLUTION BOX:
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.91\textwidth]
+    \textbf{Solution:}\\
+    \end{tcolorbox}
+
+\end{parts}
+\end{questions}
+
+
+% SOLUTION BOX (ENUMERATE ITEM QUESTION):
+\begin{enumerate}
+    \item Example Enumerated Item Question?
+
+    % SOLUTION BOX:
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.9\textwidth]
+    \textbf{Solution:}\\
+    \end{tcolorbox}
+
+\end{enumerate}
+
+
+
+%= ANSWER BOX FORMATS
+\begin{center}
+    \textbf{\underline{Answer Box Formats}}
+\end{center}
+
+
+% GENERAL SOLUTION BOX:
+
+\begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.95\textwidth]
+\textbf{Answer:}\\
+\end{tcolorbox}
+
+
+% ANSWER BOX (REGULAR QUESTION):
+\begin{questions}
+    \question Regular Example Question?
+
+    % ANSWER BOX:
+    
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.95\textwidth]
+    \textbf{Answer:}\\
+    \end{tcolorbox}
+    
+\end{questions}
+    
+
+% ANSWER BOX (QUESTION PART):
+\begin{questions}
+    \question Example Question With A Part?
+    \begin{parts}
+    \part Example Question Part?
+
+    % ANSWER BOX:
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.91\textwidth]
+    \textbf{Answer:}\\
+    \end{tcolorbox}
+
+\end{parts}
+\end{questions}
+
+
+% ANSWER BOX (ENUMERATE ITEM QUESTION):
+\begin{enumerate}
+    \item Example Enumerated Item Question?
+
+    % ANSWER BOX:
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=0.9\textwidth]
+    \textbf{Answer:}\\
+    \end{tcolorbox}
+
+\end{enumerate}
+
+
+
+\end{document}
