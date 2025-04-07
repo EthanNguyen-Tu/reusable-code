@@ -9,3 +9,25 @@
 %= Colors
 \definecolor{Solution_Trim}{RGB}{100, 150, 255}
 \definecolor{Solution_Box}{RGB}{235, 245, 255}
+
+%= New Commands
+
+% Creates a general answer box
+% How To Use:
+% \answerbox{YOUR_CONTENT_HERE}
+% \answerbox[CUSTOM_WIDTH]{YOUR_CONTENT_HERE}
+\newcommand{\answerbox}[2][0.95]{
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=#1\textwidth]
+        \textbf{Answer:}\\#2
+    \end{tcolorbox}
+}
+
+% Creates a general solution box
+% How to Use:
+% \solutionbox{YOUR_CONTENT_HERE}
+% \solutionbox[CUSTOM_WIDTH]{YOUR_CONTENT_HERE}
+\newcommand{\solutionbox}[2][0.95]{
+    \begin{tcolorbox}[colframe=Solution_Trim, colback=Solution_Box, breakable, boxrule=0.8mm, width=#1\textwidth]
+        \textbf{Solution:}\\#2
+    \end{tcolorbox}
+}
